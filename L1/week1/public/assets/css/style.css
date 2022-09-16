@@ -1,0 +1,365 @@
+@import url("https://use.typekit.net/lcd8aiq.css");
+
+@import url('http://fonts.cdnfonts.com/css/poppins');
+
+                
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+:root{
+  --black: #000;
+  --white: #fff;
+  --darker-purple: #150050;
+  --dark-purple: #3F0071;
+  --lighter-purple: #610094;
+  --cube-bg:#090909;
+  --main-bg:#F7F7F7;
+  --hero-h1: #393E46;
+}
+
+body,html{
+   font-family: "Poppins","Arial", sans-serif;
+   min-height: 200vh;
+   height: 100%;
+   background-color: var(--main-bg);
+ }
+ 
+ @media (max-width: 500px) {
+  body,html{
+    margin: 0;
+    overflow-x: clip;
+  }
+}
+
+
+ 
+ h1, h2, h3, h4, h5, h6 {
+   font-family: "Aileron","Arial", sans-serif;
+ }
+
+ h3{
+  color: var(--hero-h1);
+  letter-spacing: -2px;
+ }
+ /*--------------------------------------------------------------
+# Nav
+--------------------------------------------------------------*/
+nav{
+  margin: 20px 0 0 150px ;
+}
+@media (max-width: 1000px) {
+  nav{
+    margin: 0;
+  }
+}
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+.hero{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 999;
+  background-size: cover;
+  background-color:var(--main-bg);
+}
+
+.hero-main{
+  display: flex;
+  flex-direction: row;
+}
+
+.hero h1{
+  color:var(--black);
+  font-family: "Poppins",sans-serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+.hero img{
+  width: 400px;
+  height: 400px;
+}
+
+.hero-socials ul{
+  list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.hero-socials li{
+  float: left;
+}
+
+.hero-socials li a{
+  text-align: start ;
+  text-decoration: none;
+  padding: 16px;
+  color: var(--hero-h1);
+  font-size: 1em;
+}
+.hero-socials li a:hover{
+  color: var(--dark-purple);
+}
+
+
+
+.hero-copy p{
+  text-align: end;
+  text-decoration: none;
+  padding: 16px;
+  color: var(--hero-h1);
+  font-size: 1em;
+}
+@media (max-width: 992px) {
+  .hero h1{
+   font-size: 1.4rem;
+  }
+}
+ @media (max-width: 500px) {
+
+  .hero-main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero{
+    height: 75vh;
+  }
+
+  .hero h1{
+    font-size: 1rem;
+    text-align: center;
+   }
+   .hero-socials ul{
+    display: none;
+  }
+
+   .hero img{
+    width: 300px;
+    height: 300px;
+  }
+}
+
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  nav{
+    z-index: 9999;
+  }
+
+  .cube {
+    padding: 0;
+    
+  }
+  .cube * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .cube > ul > li {
+    position: relative;
+    white-space: nowrap;
+  }
+  .cube a, .cube a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #45505b;
+    font-size: 1em;
+    width: 100%;
+    overflow: hidden;
+  }
+ 
+
+  .cube a :hover span, .cube .active span, .cube .active:focus span, .cube li:hover > a span {
+    color: var(--dark-purple);
+    font-size: larger;
+    
+  }
+
+  .cube a:hover span, .cube .active span, .cube .active:focus span, .cube li:hover > a span {
+    color: var(--dark-purple);
+  }
+  .cube a:hover, .cube li:hover > a {
+    width: 100%;
+    color: var(--dark-purple);
+  }
+  .cube a:hover span, .cube li:hover > a span {
+    display: block;
+  }
+
+ 
+.cube .nav-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.cube .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--lighter-purple);
+    transition: width .3s;
+}
+
+.cube .nav-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+@media (max-width: 992px) {
+  .cube a, .cube a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .cube a, .cube a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 320px) {
+  .cube a, .cube a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6em;
+  }
+}
+
+
+
+  /*--------------------------------------------------------------
+  # opdr2
+  --------------------------------------------------------------*/
+
+  #opdr2{
+    height: 100vh;
+    z-index: 999;
+    margin: 150px 100px 0 100px;
+  }
+
+  
+
+  .about-main img{
+    height: 400px;
+    width: 400px;
+    object-position: 50%;
+    object-fit: contain;
+    position: relative;
+    z-index: 999;
+  }
+  img{
+    max-width: 100%;
+  }
+
+
+  .about-row{
+    margin: 50px 0 0 0;
+  }
+
+  @media (max-width: 992px) {
+    #about{
+      margin: 100px 10px 0 10px;
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    #about{
+      margin: 50px 10px 0 10px;
+    }
+    .about-main img{
+      height: 200px;
+      width: 200px;
+      margin: 20px 0 0 0;
+    }
+    .about-main p{
+      margin: 20px 0 0 0;
+    }
+  }
+  
+  #opdr3{
+    height: 100vh;
+    z-index: 999;
+    margin: 150px 100px 0 100px;
+  }
+
+     /*--------------------------------------------------------------
+  # footer
+  --------------------------------------------------------------*/
+
+  footer{
+    height: 200px;
+    position: relative;
+    z-index: 999;
+    margin: 0 100px 0 100px;
+  }
+
+  footer h4{
+    font-size: 1em;
+  }
+
+  footer h4 a{
+    padding: 10px 10px 0 10px;
+    color: var(--lighter-purple);
+  }
+
+  footer h4 a:hover{
+    color: var(--dark-purple);
+  }
+
+  .col1 img{
+    width: 20%;
+  }
+
+  .col1 h3{
+    margin-left: 12px;
+  }
+
+  .col2{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+  }
+
+  .col3{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: end;
+  }
+
+  @media (max-width: 500px){
+    footer{
+      margin: 0 10px 0 10px;
+    }
+
+    footer h4 a{
+      padding:0;
+    }
+    .row-main{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .col2{
+      display: block;
+      margin: 12px 0 0 12px ;
+    }
+
+    .col3{
+      display: block;
+      margin: 12px 0 0 12px ;
+    }
+  }

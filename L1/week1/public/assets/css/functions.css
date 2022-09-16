@@ -1,0 +1,198 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+:root{
+  --black: #000;
+  --white: #fff;
+  --darker-purple: #150050;
+  --dark-purple: #3F0071;
+  --lighter-purple: #610094;
+  --cube-bg:#090909;
+  --main-bg:#F7F7F7;
+  --hero-h1: #393E46;
+}
+
+
+ /*--------------------------------------------------------------
+# parallax
+--------------------------------------------------------------*/
+
+#parallax{
+   width: 100%;
+   height: 50%; 
+   background: var(--cube-bg);
+   z-index: 1;
+   /* Create the parallax scrolling effect */
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+    
+}
+
+ 
+ .cube-wrap {
+   --size: 20vmin;
+   position: fixed;
+   background-attachment: fixed;
+   top: 50%;
+   left: 50%;
+   width: 0;
+   height: 0;
+   perspective: 100vmin;
+   z-index: 99;
+ }
+ .cube{
+   transform-style: preserve-3d;
+   transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+   animation: cube 1s linear;
+ }
+ @keyframes cube {
+   to {
+     transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
+   }
+ }
+ 
+ .side {
+   position: absolute;
+   width: var(--size);
+   height: var(--size);
+   background-color: #eee;
+   backface-visibility: visible;
+   top: calc(var(--size) * -.5);
+   left: calc(var(--size) * -.5);
+ }
+ .top {
+   background-color: var(--white);
+   transform: rotateX(90deg) translateZ(calc(var(--size) * .5));
+ }
+ .bottom {
+   background-color: #999;
+   transform: rotateX(90deg) translateZ(calc(var(--size) * -.5));
+ }
+ .left {
+   background-color: #ccc;
+   transform: rotateY(90deg) translateZ(calc(var(--size) * .5));
+ }
+ .right {
+   background-color: #ddd;
+   transform: rotateY(90deg) translateZ(calc(var(--size) * -.5));
+ }
+ .front {
+   background-color: #aaa;
+   transform: translateZ(calc(var(--size) * .5));
+ }
+ .back {
+   background-color: #bbb;
+   transform: translateZ(calc(var(--size) * -.5));
+ }
+
+
+
+
+
+ /*--------------------------------------------------------------
+  # Back to top button
+  --------------------------------------------------------------*/
+  .back-to-top {
+   position: fixed;
+   visibility: hidden;
+   opacity: 0;
+   right: 15px;
+   bottom: 15px;
+   z-index: 9999;
+   background: var(--lighter-purple);
+   width: 40px;
+   height: 40px;
+   border-radius: 50px;
+   transition: all 0.4s;
+ }
+ .back-to-top i {
+   font-size: 28px;
+   color: var(--white);
+   line-height: 0;
+ }
+ .back-to-top:hover {
+   background: var(--dark-purple);
+   color: var(--white);
+ }
+ .back-to-top.active {
+   visibility: visible;
+   opacity: 1;
+ }
+
+  /*--------------------------------------------------------------
+  # Cursor
+  --------------------------------------------------------------*/
+
+  .cursor {
+    position: fixed;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #00000033;
+    backdrop-filter: blur(3px);
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    left: -50px;
+    top: 50%;
+    mix-blend-mode: difference; 
+    background-color: #ffffff0c;
+    z-index: 10000;
+    border: 2px solid #dbd9d91a;
+    height: 50px;
+    width: 50px;
+    transition: all 200ms ease-out;
+  }
+
+  .parallax * {
+    /* Pause the animation */
+     animation-play-state: paused;
+     /* Bind the animation to scroll */
+     animation-delay: calc(var(--scroll) * -1s);
+     /* These last 2 properites clean up overshoot weirdness */
+     animation-iteration-count: 10;
+     animation-fill-mode: both;
+   }
+   
+ /*--------------------------------------------------------------
+  # bg stars
+  --------------------------------------------------------------*/
+  .main{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 0.5px;
+    width: 0.5px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 42vw -24vh 2px 2px #fff,-18vw 35vh 3px 1px #fff,-24vw 8vh 2px 1px #fff,49vw 43vh 3px 2px #fff,-2vw 9vh 1px 3px #fff,-9vw 25vh 0px 2px #fff,2vw -1vh 3px 2px #fff,27vw -14vh 3px 0px #fff,-25vw -45vh 3px 2px #fff,-48vw -31vh 3px 3px #fff,14vw -31vh 3px 3px #fff,34vw 16vh 2px 0px #fff,-16vw -9vh 1px 3px #fff,35vw -3vh 0px 0px #fff,49vw 47vh 0px 3px #fff,41vw 21vh 0px 1px #fff,-46vw 32vh 1px 3px #fff,-45vw -34vh 0px 1px #fff,36vw 2vh 1px 1px #fff,-39vw 38vh 1px 2px #fff,15vw 42vh 1px 1px #fff,-44vw 33vh 2px 1px #fff,12vw 26vh 0px 2px #fff,-3vw 22vh 3px 3px #fff,11vw 31vh 2px 0px #fff,50vw 1vh 3px 2px #fff,28vw -17vh 1px 3px #fff,22vw 37vh 1px 2px #fff,-8vw 40vh 3px 3px #fff,39vw -11vh 2px 1px #fff,28vw -34vh 3px 2px #fff,5vw -20vh 0px 1px #fff,34vw 6vh 2px 3px #fff,-25vw -29vh 0px 2px #fff,32vw 31vh 2px 2px #fff,16vw 20vh 3px 3px #fff,-2vw -4vh 3px 0px #fff,-33vw -7vh 2px 1px #fff,28vw 0vh 1px 0px #fff,-24vw 32vh 2px 2px #fff,-45vw -31vh 1px 0px #fff,19vw -17vh 1px 0px #fff,-18vw 18vh 1px 0px #fff,-30vw -3vh 1px 3px #fff,4vw -44vh 2px 2px #fff,-35vw 8vh 0px 0px #fff,-27vw -9vh 2px 2px #fff,-1vw -10vh 2px 1px #fff,46vw -49vh 3px 1px #fff,27vw -11vh 3px 2px #fff,10vw -38vh 1px 2px #fff,-9vw 47vh 2px 3px #fff,-21vw -42vh 0px 0px #fff,-20vw -42vh 0px 0px #fff,-6vw -28vh 1px 1px #fff,-30vw -6vh 0px 3px #fff,3vw 45vh 3px 3px #fff,-3vw 29vh 2px 2px #fff,-33vw -9vh 0px 0px #fff,-49vw -41vh 1px 3px #fff,23vw -32vh 1px 3px #fff,20vw -42vh 2px 0px #fff,26vw 5vh 3px 0px #fff,-11vw 29vh 1px 1px #fff,-34vw -24vh 2px 3px #fff,-18vw 5vh 0px 2px #fff,1vw -19vh 0px 3px #fff,49vw 3vh 1px 3px #fff,10vw -17vh 1px 0px #fff,12vw 40vh 3px 0px #fff,17vw -49vh 2px 3px #fff,49vw 24vh 3px 1px #fff,-7vw -24vh 3px 3px #fff,-40vw -35vh 3px 0px #fff,-30vw -5vh 3px 2px #fff,8vw -16vh 1px 3px #fff,38vw 3vh 1px 2px #fff,-44vw -18vh 0px 2px #fff,-43vw 41vh 0px 1px #fff,-9vw -35vh 2px 0px #fff,-30vw 18vh 2px 2px #fff,29vw 32vh 2px 3px #fff,26vw 43vh 2px 2px #fff,-47vw -42vh 1px 2px #fff,-7vw 25vh 0px 0px #fff,-35vw -6vh 3px 1px #fff,-17vw 3vh 3px 2px #fff,41vw 9vh 1px 3px #fff,-42vw 12vh 3px 2px #fff,39vw 29vh 2px 3px #fff,24vw 26vh 0px 0px #fff,23vw -33vh 2px 0px #fff,6vw 1vh 1px 1px #fff,-41vw 26vh 1px 1px #fff,-11vw -26vh 0px 1px #fff,28vw 15vh 2px 3px #fff,14vw 11vh 1px 0px #fff,31vw 45vh 0px 2px #fff,32vw 14vh 3px 3px #fff,46vw -10vh 3px 2px #fff;
+    animation: zoom 8s alternate infinite;
+  }
+  
+  @keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(2);
+    }
+  }
+
+   /*--------------------------------------------------------------
+  # reveal fade in
+  --------------------------------------------------------------*/
+  .reveal{
+    position: relative;
+    z-index: 999;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
+  
