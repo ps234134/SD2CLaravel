@@ -2,6 +2,7 @@
 
 @section('content')
     
-     <h2>{{ $songName }}</h2>
+     <h2>{{$index}}</h2>
+    
  
 @endsection

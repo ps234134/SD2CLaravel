@@ -47,9 +47,9 @@ class SongController extends Controller
      */
     public function show($index)
     {
-        $index = ['Living on a prayer', 'Nothing else matters', 'Thunderstruck', 'Back in black', 'Ace of spades'];
+        $songs = ['Living on a prayer', 'Nothing else matters', 'Thunderstruck', 'Back in black', 'Ace of spades'];
         
-        return view('songs.show', ['songName' => $index]);
+        return view('songs.show', ['index' => $songs[$index]]);
     }
 
     /**

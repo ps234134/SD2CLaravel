@@ -9,4 +9,4 @@ Route::get('/home', function () {
 
 Route::get('/songs', [SongController::class, 'index'])->Name('songs');
 
-Route::get('/songs/{$index}', [SongController::class, 'show']);
+Route::get('/songs/{index}', [SongController::class, 'show']);

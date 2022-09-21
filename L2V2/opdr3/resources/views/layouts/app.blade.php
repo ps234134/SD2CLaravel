@@ -24,7 +24,7 @@
             <a class="text-blue-500 hover:text-blue-800" href="{{('/songs')}}">Songs</a>
         </li>
         <li class="mr-6">
-            <a class="text-blue-500 hover:text-blue-800" href="{{('/songs/{$index}')}}">Show</a>
+            <a class="text-blue-500 hover:text-blue-800" href="{{('/songs/2')}}">Show</a>
         </li>
         <li class="mr-6">
             <a class="text-blue-500 hover:text-blue-800" href="#">Create</a>
