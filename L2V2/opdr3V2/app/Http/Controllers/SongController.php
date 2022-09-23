@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+
 
 class SongController extends Controller
 {
@@ -23,9 +23,13 @@ class SongController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+  
+    public function showSong(Request $request)
     {
-       
+       // Usage of path method
+       $name = $request -> input('song');
+      return view('songs.songData', ['SongName' => $name]);
+     
     }
 
     /**
