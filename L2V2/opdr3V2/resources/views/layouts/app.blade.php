@@ -30,7 +30,7 @@
             <a class="text-blue-500 hover:text-blue-800" href="{{('/create')}}">Create</a>
         </li>
         <li class="mr-6">
-            <a class="text-blue-400 hover:text-blue-800" href="{{('/edit')}}">Edit</a>
+            <a class="text-blue-400 hover:text-blue-800" href="{{('/songs/1/edit')}}">Edit</a>
         </li>
     </ul>
     @yield('content')

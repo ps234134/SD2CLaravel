@@ -22,6 +22,7 @@ Route::get('/create', function () {
 Route::post('/songs/songData', [SongController::class, 'showSong']); 
 
 //show edit page
-Route::get('/edit', function () {
-    return view('songs.edit');
-});
+
+Route::get('/songs/{id}/edit', [SongController::class, 'edit']);
+Route::get('/songs/{id}/update', [SongController::class, 'edit2']);
+Route::post('/songs/{id}/edit', [SongController::class, 'update']);

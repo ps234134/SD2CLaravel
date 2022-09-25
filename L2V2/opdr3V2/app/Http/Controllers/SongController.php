@@ -54,6 +54,7 @@ class SongController extends Controller
         $songs = ['Living on a prayer', 'Nothing else matters', 'Thunderstruck', 'Back in black', 'Ace of spades'];
         
         return view('songs.show', ['index' => $songs[$index]]);
+        
     }
 
     /**
@@ -64,7 +65,18 @@ class SongController extends Controller
      */
     public function edit($id)
     {
-        //
+        $songs = ['Living on a prayer', 'Nothing else matters', 'Thunderstruck', 'Back in black', 'Ace of spades'];
+        
+        return view('songs.edit', ['id' => $id],['index' => $songs[$id]]);
+        return view('songs.song_update',['id2' => $id]);
+    }
+
+    public function edit2($id)
+    {
+        $songs = ['Living on a prayer', 'Nothing else matters', 'Thunderstruck', 'Back in black', 'Ace of spades'];
+        
+       
+        return view('songs.song_update',['id' => $songs[$id]]);
     }
 
     /**
@@ -76,7 +88,9 @@ class SongController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+    $songs = ['Living on a prayer', 'Nothing else matters', 'Thunderstruck', 'Back in black', 'Ace of spades'];
+       $name = $request -> input('song_name');
+       return view('songs.edit', ['id' => $name],['index' => $songs[$name]]);
     }
 
     /**
