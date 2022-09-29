@@ -3,7 +3,7 @@
 @section('content')
 <form action = "/songs/{id}/edit" method = "POST" class="ml-40">
          @csrf
-      
+         
          <table>
             <tr>
                <td class="border-solid border-2 border-indigo-600 font-bold">Song:</td>
