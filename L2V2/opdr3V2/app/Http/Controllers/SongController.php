@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class SongController extends Controller
 {
+
+    public $songs;
+
+    public function __construct()
+    {
+        $this -> songs = ['Living on a prayer', 'Nothing else matters', 'Thunderstruck', 'Back in black', 'Ace of spades'];
+    }
     /**
      * Display a listing of the resource.
      *
