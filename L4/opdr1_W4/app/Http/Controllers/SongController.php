@@ -25,7 +25,7 @@ class SongController extends Controller
      */
     public function create()
     {
-        //
+        return view('songs_table.create');
     }
 
     /**
@@ -36,7 +36,18 @@ class SongController extends Controller
      */
     public function store(Request $request)
     {
-        //
+          // Validation for required fields (and using some regex to validate our numeric value)
+          $request->validate([
+            'title'=>'required',
+            'singer'=>'required'
+        ]);
+        // Getting values from the blade template form
+        $stock = new Songs([
+            'title' => $request->get('title'),
+            'singer' => $request->get('singer')
+        ]);
+        $stock->save();
+        return redirect('/title')->with('success', 'Songs saved.');   // -> resources/views/stocks/index.blade.php
     }
 
     /**

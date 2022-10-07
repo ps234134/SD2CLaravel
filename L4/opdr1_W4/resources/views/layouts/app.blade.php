@@ -14,7 +14,7 @@
             <li class="mr-6 flex-auto">
                 Songs
             </li>
-            
+
         </ul>
     </div>
     <ul class="flex text-3xl mt-4 p-4">
@@ -26,6 +26,9 @@
         </li>
         <li class="mr-6">
             <a class="text-blue-500 hover:text-blue-800" href="{{'/details/1'}}">Details</a>
+        </li>
+        <li class="mr-6">
+            <a class="text-blue-500 hover:text-blue-800" href="{{'/create'}}">Create</a>
         </li>
 
     </ul>

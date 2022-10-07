@@ -19,3 +19,9 @@ Route::get('/home', function () {
 
 route::get('/title', 'App\Http\Controllers\SongController@index');
 route::get('/details/{id}', 'App\Http\Controllers\SongController@show');
+
+Route::get('/create', function () {
+    return view('songs_table.create');
+});
+
+Route::post('/create2', 'App\Http\Controllers\SongController@store');
