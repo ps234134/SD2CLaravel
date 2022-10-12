@@ -17,8 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 route::get('/home', 'App\Http\Controllers\CarController@index');
 
-Route::get('/create', function () {
-    return view('cars.create');
-});
 
-Route::post('/create2', 'App\Http\Controllers\CarController@store');
+Route::resource('cars', 'App\Http\Controllers\CarController');

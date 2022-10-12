@@ -13,7 +13,7 @@
            </ul>
          </div><br />
        @endif
-         <form method="POST" action="{{'/create2'}}" class="ml-100 border-solid border-2 border-indigo-600 text-3xl">
+         <form method="POST" action="{{ route('cars.store') }}" class="ml-100 border-solid border-2 border-indigo-600 text-3xl">
              @csrf
              <div class="form-group border-solid border-2 border-indigo-300">
                  <label for="stock_name">Merk:*</label>

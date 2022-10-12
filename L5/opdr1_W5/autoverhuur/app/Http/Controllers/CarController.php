@@ -25,7 +25,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        return view('cars.create');
     }
 
     /**
@@ -71,7 +71,8 @@ class CarController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cars = Car::find($id);
+        return view('cars.edit', compact('cars'));
     }
 
     /**
@@ -83,7 +84,18 @@ class CarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'merk'=>'required',
+            'type'=>'required',
+            'bouwjaar'=>'required'
+        ]);
+
+        $cars = Car::find($id);
+        $cars->merk = $request->get('merk');
+        $cars->type = $request->get('type');
+        $cars->bouwjaar = $request->get('bouwjaar');
+        $cars->save();
+        return redirect('/home')->with('success', 'Car updated.');
     }
 
     /**
@@ -94,6 +106,8 @@ class CarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cars = Car::find($id);
+        $cars->delete();
+        return redirect('/home')->with('success', 'Car deleted.');
     }
 }

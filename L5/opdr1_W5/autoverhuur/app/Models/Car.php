@@ -11,6 +11,7 @@ class Car extends Model
 
     protected $table = 'leenautos';
     protected $fillable = [
+        'id',
         'merk',
         'type',
         'bouwjaar',
