@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-route::get('/home', 'App\Http\Controllers\CarController@index');
+route::get('/home', [CarController::class, 'index']);
 
 
-Route::resource('cars', 'App\Http\Controllers\CarController');
+Route::resource('cars', CarController::class);

@@ -15,7 +15,7 @@ class CarController extends Controller
     public function index()
     {
        $cars = Car::all();
-       return view('index', compact('cars'));
+       return view('index', ['cars' => $cars]);
     }
 
     /**
@@ -72,7 +72,7 @@ class CarController extends Controller
     public function edit($id)
     {
         $cars = Car::find($id);
-        return view('cars.edit', compact('cars'));
+        return view('cars.edit',['cars' => $cars]);
     }
 
     /**

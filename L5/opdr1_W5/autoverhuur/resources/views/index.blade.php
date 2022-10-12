@@ -8,7 +8,6 @@
             <th>Merk</th>
             <th class="border-solid border-2 border-indigo-600">Type</th>
             <th class="border-solid border-2 border-indigo-600">Bouwjaar</th>
-
         </tr>
     </thead>
     <tbody>
