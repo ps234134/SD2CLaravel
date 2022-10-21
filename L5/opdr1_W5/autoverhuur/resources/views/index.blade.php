@@ -26,6 +26,6 @@
         </tr>
         @endforeach
 
-
+    <p>list donw bij bouwjaar</p>
     </tbody>
 @endsection

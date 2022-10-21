@@ -86,7 +86,7 @@ class CarController extends Controller
     {
         $request->validate([
             'merk'=>'required',
-            'type'=>'required',
+            'type'=>'required','[0-9]+',
             'bouwjaar'=>'required'
         ]);
 

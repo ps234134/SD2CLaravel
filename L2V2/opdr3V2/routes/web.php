@@ -19,7 +19,7 @@ Route::get('/create', function () {
     return view('songs.create');
 });
 
-Route::post('/songs/songData', [SongController::class, 'showSong']); 
+Route::post('/songs/songData', [SongController::class, 'showSong']);
 
 //show edit page
 
